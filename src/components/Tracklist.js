@@ -1,12 +1,16 @@
 import React from "react";
+import SearchResults from "./SearchResults";
 
-function Tracklist() {
+function Tracklist(props) {
     return(
-        <div>
-            <h2>My Playlist</h2>
-            <h3>Playlist name</h3> {/*Zařídit možnost ho přepsat dle sebe */}
-            <div className="playlist">
-
+        <div className="searchResults">
+            <h2>Results</h2>
+            <div>
+                <SearchResults 
+                    className="results"
+                    strings={props}
+                />
+            {/* {props.target.value} ?? jenom koncept myšlenek */}
             </div>
         </div>
     )

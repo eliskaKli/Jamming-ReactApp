@@ -4,6 +4,7 @@
     width: 40%;
     min-width: 300px;
     padding: 10px;
+    margin: 30px auto;
     position: relative;
     display: flex;
     justify-content: space-between; 
@@ -13,7 +14,7 @@ h3 {
     font-size: 16px;
 };
 
-.searchInput{
+.search .searchInput{
     font-size: 16px;
     font-family: 'Bungee';
     margin: 26px auto;
@@ -22,7 +23,10 @@ h3 {
     background-color: transparent;
 };
 
-.searchIcon{
+.search button{
+    background-image: url(../img/search-icon.svg);    
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

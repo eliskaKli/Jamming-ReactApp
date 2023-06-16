@@ -1,23 +1,27 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import './App.css';
 import SearchBar from './components/SearchBar';
-import SearchResults from './components/SearchResults';
 import Tracklist from './components/Tracklist';
+import Playlist from './components/Playlist';
+import './App.css';
 
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <header className='jamming'>
         <h1>Jamming</h1>
       </header>
       <div>
-      <SearchBar />
+        <SearchBar onSearch={search}/>
       </div>
-      <div className='columns'>
-        <SearchResults />
-        <Tracklist />
+      <div className='columnsContainer'>
+        <Tracklist  
+          className='resultsColumn'
+        />
+        <Playlist 
+          className='playlistColumn'
+        />
       </div> 
     </div>
     // <div className="App">

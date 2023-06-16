@@ -1,13 +1,21 @@
 import React from "react";
-import './SearchResults.css';
+import '../components_styles/SearchResults.css';
 
 function SearchResults(props) {
   return(
-    <div className="searchResults">
-        <h2>Results</h2>
-        <div>
-            {/* {props.target.value} ?? jenom koncept myšlenek */}
-        </div>
+    <div>
+        {/* <ul>{props.strings.map((string, i) => 
+            (<li 
+                key={'string' + i}
+                className=""
+                onClick={() => props.onSelectItem(string)}
+            >
+                <div>{string.name}</div>
+                <div>{string.artist}</div>
+                <div>{string.album}</div>
+            </li>
+          ))}
+        </ul> */}
     </div>
   )
 };
