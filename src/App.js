@@ -1,46 +1,71 @@
-import React from 'react';
-//import ReactDOM from 'react-dom';
-import SearchBar from './components/SearchBar';
-import Tracklist from './components/Tracklist';
-import Playlist from './components/Playlist';
+import React, { useState, useCallback } from 'react';
+
 import './App.css';
 
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
+import Playlist from './components/Playlist';
+import Spotify from './util/Spotify';
 
 function App() {
+  const [searchResults, setSearchResults] = useState([]);
+  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  const search = useCallback((term) => {
+    Spotify.search(term).then(setSearchResults);
+  }, []);
+
+  const addTrack = useCallback(
+    (track) => {
+      if (playlistTracks.some((savedTrack) => savedTrack.id === track.id))
+        return;
+
+      setPlaylistTracks((prevTracks) => [...prevTracks, track]);
+    },
+    [playlistTracks]
+  );
+
+  const removeTrack = useCallback((track) =>{
+    setPlaylistTracks((prevTracks) =>
+      prevTracks.filter((currentTrack) => currentTrack.id !== track.id)
+      );
+  }, []);
+
+  const updatePlaylistName = useCallback((name) => {
+    setPlaylistName(name);
+  }, []);
+
+  const savePlaylist = useCallback(() => {
+    const trackUris = playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    });
+  }, [playlistName, playlistTracks]);
+
+
   return (
-    <div className='app'>
-      <header className='jamming'>
+    <div className='App'>
+      <header className='Jamming'>
         <h1>Jamming</h1>
       </header>
       <div>
         <SearchBar onSearch={search}/>
       </div>
       <div className='columnsContainer'>
-        <Tracklist  
-          className='resultsColumn'
-        />
+        <SearchResults className='resultsColumn' searchResults={searchResults} onAdd={addTrack} />
         <Playlist 
-          className='playlistColumn'
+          className='playlistColumn' 
+          playlistName={playlistName}
+          playlistTracks={playlistTracks}
+          onNameChange={updatePlaylistName}
+          onRemove={removeTrack}
+          onSave={savePlaylist}
         />
       </div> 
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
-}
+};
 
 export default App;

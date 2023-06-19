@@ -14,16 +14,16 @@ function SearchBar(props) {
     }, [props.onSearch, term]);
 
     return(
-        <div className="searchBar">
-            <div className="search">
+        <div className="SearchBar">
+            <div className="Search">
                 <input 
-                    className="searchInput"
+                    className="SearchInput"
                     type="text"
                     placeholder="Type here for the song"
                     name="searchInput"
                     value={props.value}
                     onChange={handleTermChange}/>
-                <button className='searchButton' onClick={search}>
+                <button className='SearchButton' onClick={search}>
                     {/* <img className="searchIcon" src="../img/search-icon.svg" alt="Search"/> */}
                 </button>
             </div>

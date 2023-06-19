@@ -1,4 +1,4 @@
-.search {
+.Search {
     background-color: rgba(239, 78, 155, 1);
     border-radius: 5px;
     width: 40%;
@@ -14,7 +14,7 @@ h3 {
     font-size: 16px;
 };
 
-.search .searchInput{
+.Search .SearchInput{
     font-size: 16px;
     font-family: 'Bungee';
     margin: 26px auto;
@@ -23,7 +23,7 @@ h3 {
     background-color: transparent;
 };
 
-.search button{
+.SearchButton{
     background-image: url(../img/search-icon.svg);    
     background-position: center;
     background-repeat: no-repeat;

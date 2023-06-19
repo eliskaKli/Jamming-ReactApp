@@ -1,19 +1,26 @@
 import React from "react";
-import SearchResults from "./SearchResults";
+
+import "../components_styles/Tracklist.css";
+
+import Track from "./Track";
+
 
 function Tracklist(props) {
     return(
-        <div className="searchResults">
-            <h2>Results</h2>
-            <div>
-                <SearchResults 
-                    className="results"
-                    strings={props}
-                />
-            {/* {props.target.value} ?? jenom koncept myšlenek */}
-            </div>
+        <div className="TrackList">
+            {props.tracks.map((track) => {
+                return (
+                    <Track
+                        track={track}
+                        key={track.id}
+                        onAdd={props.onAdd}
+                        isRemoval={props.isRemoval}
+                        onRemove={props.onRemove}
+                    />
+                );
+            })}
         </div>
-    )
+    );        
 };
 
 export default Tracklist;
