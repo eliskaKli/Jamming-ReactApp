@@ -1,0 +1,47 @@
+.Track {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6fccaa;
+    width: 98%;
+}
+
+div .TrackInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0em;
+    color: #7D3264;
+}
+
+.TrackAction {
+    color: #6fccaa;
+    background-color: transparent;
+    font-family: 'Bungee';
+    font-size: 30px;
+    font-weight: 600;
+    border: 0px; 
+}
+
+.TrackAction:active {
+    color: #4A8872;
+    font-weight: 400;
+
+}
+
+.SongName {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.SongArtist {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+
+.SongAlbum {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 1em;
+}

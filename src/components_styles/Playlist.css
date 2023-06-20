@@ -1,0 +1,52 @@
+.Playlist {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 37px;
+    padding: 3%;
+    width: 400px;
+    height: 676px;
+    background-color: rgba(254, 208, 255, 1);
+}
+
+.Playlist input {
+    background-color: transparent;
+    border: 0px;
+    font-family: 'Bungee';
+    color: #7D3264;
+}
+
+.Playlist input:hover {
+    color: #EF4E9B;
+}
+
+.PlaylistSave {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 37px auto;
+    /* position: absolute; */
+    width: 170px;
+    height: 55px;
+    background: #EF4E9B;
+    color: #D0F1E5;
+    font-family: 'Bungee';
+    line-height: 19px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    border-radius: 5px;
+}
+
+.PlaylistSave:active {
+    box-shadow: none;
+    margin-top: 40px;
+}
+
+hr {
+    margin: 0;
+    top: 80px;
+    border: 1.5px solid rgba(111, 204, 170, 1);
+    overflow: hidden;
+    position: inherit;
+} 

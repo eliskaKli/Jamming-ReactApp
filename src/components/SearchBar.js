@@ -7,7 +7,7 @@ function SearchBar(props) {
 
     const handleTermChange = useCallback((event) => {
         setTerm(event.target.value);
-    }, [] );
+    }, []);
 
     const search = useCallback(() => {
         props.onSearch(term);
@@ -15,18 +15,12 @@ function SearchBar(props) {
 
     return(
         <div className="SearchBar">
-            <div className="Search">
                 <input 
                     className="SearchInput"
                     type="text"
-                    placeholder="Type here for the song"
-                    name="searchInput"
-                    value={props.value}
+                    placeholder="Type here the song title"
                     onChange={handleTermChange}/>
-                <button className='SearchButton' onClick={search}>
-                    {/* <img className="searchIcon" src="../img/search-icon.svg" alt="Search"/> */}
-                </button>
-            </div>
+                <button className='SearchButton' onClick={search} />
         </div>
     );
 };

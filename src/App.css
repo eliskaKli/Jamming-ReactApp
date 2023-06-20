@@ -1,19 +1,32 @@
-/* div.app {
+.App {
   margin: 0 auto;
-  /* display: inline-flex;
-  flex-direction: column; 
-  justify-content: center;
-};  */
-
-.jamming h1 {
-  font-size: 40px;
-  margin: 0 auto;
-  padding: 0;
+  padding: 0 10% 10%;
   display: flex;
-  justify-content: center;
-};
+  flex-direction: column; 
+  justify-content: center; 
+}
 
-.columnsContainer {
+header .Jamming {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.Jamming {
+  font-size: 30px;
+
+}
+
+.ColumnsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+/* .columnsContainer {
   color: rgba(125, 50, 100, 1);
   border-radius: 5px;
   display: flex;
@@ -27,5 +40,5 @@
   width: 400px;
   height: 676px;
   background-color: rgba(254, 208, 255, 1);
-}
+} */
 

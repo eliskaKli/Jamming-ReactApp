@@ -1,31 +1,20 @@
 html {
   background: linear-gradient(180deg, rgba(111, 204, 170, 100) 11.46%, rgba(111, 204, 170, 0) 100%);
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
   height: 100%;
-  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: 'Asap', 'arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  max-width: 85%;
-  min-width: 50%;
 }
 
 h1, h2, h3 {
   font-family: 'Bungee', 'impact', sans-serif;
+  color: #7D3264;
+  margin: 0;
 }
 
 h1 {
-  color: #7D3264;
-  position: relative;
-}
-
-#root {
   display: flex;
   justify-content: center;
 }

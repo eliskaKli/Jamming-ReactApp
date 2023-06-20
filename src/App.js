@@ -53,10 +53,10 @@ function App() {
       <div>
         <SearchBar onSearch={search}/>
       </div>
-      <div className='columnsContainer'>
-        <SearchResults className='resultsColumn' searchResults={searchResults} onAdd={addTrack} />
+      <div className='ColumnsContainer'>
+        <SearchResults className='SearchResults' searchResults={searchResults} onAdd={addTrack} />
         <Playlist 
-          className='playlistColumn' 
+          className='Playlist' 
           playlistName={playlistName}
           playlistTracks={playlistTracks}
           onNameChange={updatePlaylistName}

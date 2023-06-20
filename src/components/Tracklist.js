@@ -5,9 +5,9 @@ import "../components_styles/Tracklist.css";
 import Track from "./Track";
 
 
-function Tracklist(props) {
-    return(
-        <div className="TrackList">
+const Tracklist = (props) => {
+    return (
+        <div className="Tracklist">
             {props.tracks.map((track) => {
                 return (
                     <Track

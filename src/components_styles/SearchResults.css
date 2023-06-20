@@ -1,0 +1,16 @@
+.SearchResults {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 37px;
+    padding: 3%;
+    width: 400px;
+    height: 676px;
+    background-color: rgba(254, 208, 255, 1);
+}
+
+.SearchResults hr {
+    margin-top: 36px;
+}
+

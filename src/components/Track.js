@@ -20,13 +20,13 @@ function Track(props) {
     function renderAction() {
         if (props.isRemoval) {
             return (
-                <button className="Track-action" onClick={removeTrack}>
-                    -
+                <button className="TrackAction" onClick={removeTrack}>
+                    –
                 </button>
             );
         }
         return (
-            <button className="Track-action" onClick={addTrack}>
+            <button className="TrackAction" onClick={addTrack}>
                 +
             </button>
         );
@@ -36,11 +36,11 @@ function Track(props) {
     return(
         <div className="Track">
             <div className="TrackInfo">
-                <p className="Song SongName">{props.track.name}</p>
-                <p className="Song SongArtist">{props.track.artist}</p>
-                <p className="Song SongAlbum">{props.track.album}</p>
+                <p className="SongName">{props.track.name}</p>
+                <p className="SongArtist">{props.track.artist}</p>
+                <p className="SongAlbum">{props.track.album}</p>
             </div>
-            <div className="TrackAction">
+            <div>
                 {renderAction()}
             </div>
         </div>
