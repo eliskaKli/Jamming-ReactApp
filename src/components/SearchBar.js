@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import '../components_styles/SearchBar.css';
-//import { icon } from '../img/search-icon.svg';
 
 function SearchBar(props) {
     const [term, setTerm] = useState("");
