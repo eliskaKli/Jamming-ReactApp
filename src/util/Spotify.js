@@ -1,6 +1,6 @@
 const clientId = '2e1be650ee644ff9bac074f7d38d8040'; 
 // const redirectUri =  'http://localhost:3000/';
-const redirectUri = 'https://media-service-provider.web.app/';  
+const redirectUri = 'https://eliskakli.github.io/Jamming-ReactApp/';  
 let accessToken;
 
 
