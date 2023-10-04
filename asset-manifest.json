@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Jamming-ReactApp/static/css/main.37b8368e.css",
-    "main.js": "/Jamming-ReactApp/static/js/main.e1be7a71.js",
+    "main.css": "/Jamming-ReactApp/static/css/main.f27e270d.css",
+    "main.js": "/Jamming-ReactApp/static/js/main.6e44f4e9.js",
     "static/js/787.d13c5306.chunk.js": "/Jamming-ReactApp/static/js/787.d13c5306.chunk.js",
     "index.html": "/Jamming-ReactApp/index.html",
     "static/media/search-icon.svg": "/Jamming-ReactApp/static/media/search-icon.45c8ec1638c2e1c8a0fa.svg",
-    "main.37b8368e.css.map": "/Jamming-ReactApp/static/css/main.37b8368e.css.map",
-    "main.e1be7a71.js.map": "/Jamming-ReactApp/static/js/main.e1be7a71.js.map",
+    "main.f27e270d.css.map": "/Jamming-ReactApp/static/css/main.f27e270d.css.map",
+    "main.6e44f4e9.js.map": "/Jamming-ReactApp/static/js/main.6e44f4e9.js.map",
     "787.d13c5306.chunk.js.map": "/Jamming-ReactApp/static/js/787.d13c5306.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37b8368e.css",
-    "static/js/main.e1be7a71.js"
+    "static/css/main.f27e270d.css",
+    "static/js/main.6e44f4e9.js"
   ]
 }
