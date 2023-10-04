@@ -11,6 +11,8 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [userName, setUserName] = useState("user name");
+  const [userImg, setUserImg] = useState("profile Img");
 
   const search = useCallback((term) => {
     Spotify.search(term).then(setSearchResults);
@@ -45,6 +47,16 @@ function App() {
   }, [playlistName, playlistTracks]);
 
 
+  const getUser = useCallback(() => {
+    // tady tahám data uživatele a ustanovuji jeho přihlášené jméno
+    Spotify.getUser().then((userData) => {
+      setUserName(userData.id);
+      setUserImg(userData.images[0]?.url);
+    }).catch(error => {
+      console.error('Error fetching user data', error);
+    })
+  }, []);
+
   return (
     <div className='App'>
       <header className='Jamming'>
@@ -62,6 +74,9 @@ function App() {
           onNameChange={updatePlaylistName}
           onRemove={removeTrack}
           onSave={savePlaylist}
+          onLogin={getUser}
+          userName={userName}
+          userImg={userImg}
         />
       </div> 
     </div>

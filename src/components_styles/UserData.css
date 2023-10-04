@@ -1,0 +1,9 @@
+.User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(239, 78, 155, 1);
+    font-size: 12px;
+    font-weight: 400;
+}

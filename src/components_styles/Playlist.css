@@ -9,6 +9,11 @@
     height: 676px;
     background-color: rgba(254, 208, 255, 1);
 }
+/* 
+.Playlist-headlines {
+    display: flex;
+    flex-direction: column;
+} */
 
 .Playlist input {
     background-color: transparent;
