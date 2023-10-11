@@ -1,6 +1,6 @@
 const clientId = "2e1be650ee644ff9bac074f7d38d8040";
-const redirectUri =  'http://localhost:3000/';
-// const redirectUri = "https://eliskakli.github.io/Jamming-ReactApp/";
+// const redirectUri =  'http://localhost:3000/';
+const redirectUri = "https://eliskakli.github.io/Jamming-ReactApp/";
 let accessToken;
 
 const Spotify = {
@@ -90,36 +90,7 @@ const Spotify = {
     })
       .then((response) => response.json())
       .then((jsonResponse) => {
-        //console.log("jsonResponse", jsonResponse);
         return jsonResponse;
-
-        // return {
-        //   id: jsonResponse.id, 
-        //   images: jsonResponse.images,
-        // }
-        // return jsonResponse.map((user) => ({
-        //      userName: user.id,
-        //      userImg: user.images[0]?.url,
-            // }));
-            
-      /*   
-        if (!jsonResponse.id) {
-          return {
-            userName: "No Name",
-            userImg: null,
-          };
-        }
-
-        // return jsonResponse.user.map((user) => ({
-        //   userName: user.id,
-        //   userImg: user.images[0]?.url,
-        // }));
-
-        return {
-          userName: jsonResponse.id || "No Name",
-          userImg: jsonResponse.images[0]?.url || null,
-        }
-       */
       });
   },
 };
