@@ -11,7 +11,7 @@ function UserData(props) {
          {props.userImg ? (
           <img src={props.userImg} alt="img" />
          ) : (
-          <BiSolidUserCircle size={30}/>
+          <BiSolidUserCircle /> //size={30}
          )
         }
       </div>    

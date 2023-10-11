@@ -21,7 +21,7 @@ function Playlist(props) {
       </div>
       <div className="User">
         <UserData
-          onLogin={props.onLogin}
+          // onLogin={props.onLogin}
           userName={props.userName}
           userImg={props.userImg}
         />

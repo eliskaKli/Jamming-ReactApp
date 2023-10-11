@@ -1,9 +1,9 @@
-.User {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgba(239, 78, 155, 1);
-    font-size: 12px;
-    font-weight: 400;
+.UserImg img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.User p {
+    margin: 3px auto;
 }

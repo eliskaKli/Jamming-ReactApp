@@ -1,6 +1,6 @@
 .Playlist {
     border-radius: 5px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     box-sizing: border-box;
     margin-top: 37px;
@@ -8,12 +8,13 @@
     width: 400px;
     height: 676px;
     background-color: rgba(254, 208, 255, 1);
-}
-/* 
+ }
+
+ /*
 .Playlist-headlines {
     display: flex;
     flex-direction: column;
-} */
+}  */
 
 .Playlist input {
     background-color: transparent;
@@ -26,12 +27,25 @@
     color: #EF4E9B;
 }
 
+.Playlist .User {
+    position: absolute;
+    width: 50%;
+    margin-right: 0px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(239, 78, 155, 1);
+    font-size: 12px;
+    font-weight: 400;
+}
+
 .PlaylistSave {
     display: block;
     justify-content: center;
     align-items: center;
     margin: 37px auto;
-    /* position: absolute; */
     width: 170px;
     height: 55px;
     background: #EF4E9B;
