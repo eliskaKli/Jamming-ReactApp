@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 
 import "../components_styles/Playlist.css";
 
@@ -21,7 +21,6 @@ function Playlist(props) {
       </div>
       <div className="User">
         <UserData
-          // onLogin={props.onLogin}
           userName={props.userName}
           userImg={props.userImg}
         />

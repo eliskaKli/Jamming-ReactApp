@@ -46,18 +46,6 @@ function App() {
     });
   }, [playlistName, playlistTracks]);
 
-
-  // const getUser = useCallback(() => {
-  //   // tady tahám data uživatele a ustanovuji jeho přihlášené jméno
-  //   Spotify.getUser().then((userData) => {
-  //     console.log("userData", userData)
-  //     setUserName(userData.id);
-  //     setUserImg(userData.images[0]?.url);
-  //   }).catch(error => {
-  //     console.error('Error fetching user data', error);
-  //   })
-  // }, []);
-
   useEffect( () => {
     Spotify.getUser().then( (userData) => {
       setUserName(userData.id);
@@ -84,7 +72,6 @@ function App() {
           onNameChange={updatePlaylistName}
           onRemove={removeTrack}
           onSave={savePlaylist}
-          // onLogin={getUser}
           userName={userName}
           userImg={userImg}
         />

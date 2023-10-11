@@ -10,12 +10,6 @@
     background-color: rgba(254, 208, 255, 1);
  }
 
- /*
-.Playlist-headlines {
-    display: flex;
-    flex-direction: column;
-}  */
-
 .Playlist input {
     background-color: transparent;
     border: 0px;
@@ -29,8 +23,7 @@
 
 .Playlist .User {
     position: absolute;
-    width: 50%;
-    margin-right: 0px;
+    margin-left: 22%;
     margin-top: 35px;
     display: flex;
     flex-direction: column;
@@ -69,3 +62,15 @@ hr {
     overflow: hidden;
     position: inherit;
 } 
+
+@media only screen and (max-width: 1024px) {
+    .Playlist .User {
+        margin-left: 32%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .Playlist .User {
+        margin-left: 44%;
+    }
+    }
