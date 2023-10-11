@@ -1,6 +1,6 @@
 const clientId = "2e1be650ee644ff9bac074f7d38d8040";
-// const redirectUri =  'http://localhost:3000/';
-const redirectUri = "https://eliskakli.github.io/Jamming-ReactApp/";
+const redirectUri =  'http://localhost:3000/';
+// const redirectUri = "https://eliskakli.github.io/Jamming-ReactApp/";
 let accessToken;
 
 const Spotify = {
@@ -90,6 +90,7 @@ const Spotify = {
     })
       .then((response) => response.json())
       .then((jsonResponse) => {
+        //console.log("jsonResponse", jsonResponse);
         return jsonResponse;
 
         // return {
